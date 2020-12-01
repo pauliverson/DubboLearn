@@ -1,0 +1,11 @@
+server:
+  port: 9090 # 端口
+
+# Dubbo 配置
+dubbo:
+  # 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样
+  application:
+    name: dubbo-consumer
+  # 配置注册中心
+  registry:
+    address: multicast://224.5.6.7:1234 # 发现 Multicast 注册中心暴露的服务

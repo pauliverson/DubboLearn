@@ -1,0 +1,18 @@
+server:
+  port: 7070 # 端口
+
+# Dubbo 配置
+dubbo:
+  # 提供方应用信息，用于计算依赖关系
+  application:
+    name: product-service
+  # 配置注册中心
+  registry:
+    address: multicast://224.5.6.7:1234 # 使用 Multicast 注册中心暴露服务地址
+  # 用 dubbo 协议在 20880 端口暴露服务
+  protocol:
+    name: dubbo # 协议名称
+    port: 20880 # 协议端口
+  # 扫描需要暴露的服务
+  scan:
+    base-packages: org.example.service
